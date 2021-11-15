@@ -1,0 +1,132 @@
+.home-view {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-direction : column;
+    margin         : auto;
+    max-width      : 768px;
+    width          : 100%;
+
+    >.mint-price {
+        width      : 100%;
+        color      : white;
+        font-size  : 1.5rem;
+        padding-top: 8px;
+    }
+
+    >.logo {
+        width  : 480px;
+        height : 480px;
+        padding: 16px;
+    }
+
+    >.connect {
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        font-size       : 2rem;
+        font-family     : '210 Dongwhacaek R';
+        padding         : 16px;
+        border          : 0.5px solid black;
+        border-radius   : 16px;
+        height          : 72px;
+        color           : white;
+        background-color: rgb(109, 211, 236);
+    }
+
+    >.connect:hover {
+        background-color: rgba(109, 211, 236, 0.8);
+    }
+
+    >.input-container {
+        width          : 100%;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        color          : white;
+        padding-top    : 16px;
+
+        >.label {
+            font-size    : 1.5rem;
+            padding-right: 8px;
+        }
+
+        >.address {
+            width           : 100%;
+            border          : 0.5px solid black;
+            color           : white;
+            background-color: rgb(238, 138, 134);
+            height          : 32px;
+        }
+
+        >.mint-limit {
+            width           : 100%;
+            border          : 0.5px solid black;
+            color           : white;
+            background-color: rgb(91, 198, 169);
+            height          : 32px;
+        }
+    }
+
+    >.bottom-container {
+        padding-top    : 32px;
+        width          : 100%;
+        display        : flex;
+        align-items    : flex-end;
+        justify-content: space-between;
+
+        >a {
+            display       : flex;
+            align-items   : center;
+            flex-direction: column;
+            color         : white;
+
+            >img {
+                width : 24px;
+                height: 86px;
+            }
+        }
+
+        >a:hover {
+            color: rgb(131, 87, 195);
+        }
+
+        >.progress {
+            margin       : 50px auto;
+            padding      : 2px;
+            width        : 100%;
+            max-width    : 500px;
+            border       : 2px solid black;
+            border-radius: 16px;
+            height       : 30px;
+
+            >.progress__bar {
+                height          : 100%;
+                width           : 0%;
+                background-color: rgb(251, 6, 17);
+                border-radius   : 16px;
+                animation       : fill-bar 5s infinite;
+            }
+
+            >.text-container {
+                display        : flex;
+                justify-content: space-between;
+
+                >.progress-text {
+                    margin-top: 16px;
+                    color     : white;
+                }
+            }
+        }
+
+        @keyframes fill-bar {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+    }
+}

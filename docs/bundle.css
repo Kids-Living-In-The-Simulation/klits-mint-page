@@ -1,0 +1,297 @@
+/*
+https://github.com/Hanul/sky-css-base
+v0.0.1 | 20210109
+Author: Sim Young Jae
+License: MIT
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*,
+*:focus {
+  outline: 0;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+a,
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  cursor: pointer;
+}
+button,
+input {
+  border: none;
+}
+[hidden] {
+  display: none !important;
+}
+[contenteditable] {
+  -webkit-tap-highlight-color: transparent;
+}
+.float-wrapper:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+@font-face {
+  font-family: '210 Dongwhacaek R';
+  src: url('/font/TTDongwhacaekR.woff2') format('woff2'), url('/font/TTDongwhacaekR.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: '210 Dongwhacaek R';
+  font-weight: normal;
+  font-style: normal;
+  background: #ebc77d;
+  display: flex;
+  margin: auto;
+}
+.home-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  max-width: 768px;
+  width: 100%;
+}
+.home-view > .mint-price {
+  width: 100%;
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 8px;
+}
+.home-view > .logo {
+  width: 480px;
+  height: 480px;
+  padding: 16px;
+}
+.home-view > .connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: '210 Dongwhacaek R';
+  padding: 16px;
+  border: 0.5px solid black;
+  border-radius: 16px;
+  height: 72px;
+  color: white;
+  background-color: #6dd3ec;
+}
+.home-view > .connect:hover {
+  background-color: rgba(109, 211, 236, 0.8);
+}
+.home-view > .input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-top: 16px;
+}
+.home-view > .input-container > .label {
+  font-size: 1.5rem;
+  padding-right: 8px;
+}
+.home-view > .input-container > .address {
+  width: 100%;
+  border: 0.5px solid black;
+  color: white;
+  background-color: #ee8a86;
+  height: 32px;
+}
+.home-view > .input-container > .mint-limit {
+  width: 100%;
+  border: 0.5px solid black;
+  color: white;
+  background-color: #5bc6a9;
+  height: 32px;
+}
+.home-view > .bottom-container {
+  padding-top: 32px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.home-view > .bottom-container > a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+.home-view > .bottom-container > a > img {
+  width: 24px;
+  height: 86px;
+}
+.home-view > .bottom-container > a:hover {
+  color: #8357c3;
+}
+.home-view > .bottom-container > .progress {
+  margin: 50px auto;
+  padding: 2px;
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid black;
+  border-radius: 16px;
+  height: 30px;
+}
+.home-view > .bottom-container > .progress > .progress__bar {
+  height: 100%;
+  width: 0%;
+  background-color: #fb0611;
+  border-radius: 16px;
+  animation: fill-bar 5s infinite;
+}
+.home-view > .bottom-container > .progress > .text-container {
+  display: flex;
+  justify-content: space-between;
+}
+.home-view > .bottom-container > .progress > .text-container > .progress-text {
+  margin-top: 16px;
+  color: white;
+}
+@keyframes fill-bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+

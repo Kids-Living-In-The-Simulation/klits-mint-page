@@ -1,0 +1,24 @@
+@import "base.less";
+@import "palette.less";
+
+@font-face {
+    font-family: '210 Dongwhacaek R';
+    src        : url('/font/TTDongwhacaekR.woff2') format('woff2'),
+        url('/font/TTDongwhacaekR.woff') format('woff');
+    font-weight : normal;
+    font-style  : normal;
+    font-display: swap;
+}
+
+
+body {
+    font-family: '210 Dongwhacaek R';
+    font-weight: normal;
+    font-style : normal;
+    background : @background;
+    display    : flex;
+    margin     : auto;
+}
+
+// views
+@import "view/home.less";

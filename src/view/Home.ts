@@ -40,8 +40,8 @@ export default class Home implements View {
                     const count = parseInt(this.countInput.domElement.value, 10);
                     if (isNaN(count)) {
                         alert("Mint Limit 숫자를 입력해주시기 바랍니다.");
-                    } else if (count > 20) {
-                        alert("한번에 최대 20개의 NFT만 민팅할 수 있습니다.");
+                    } else if (count > 10) {
+                        alert("한번에 최대 10개의 NFT만 민팅할 수 있습니다.");
                     } else {
                         await KlitsMinterContract.mint(count);
                     }

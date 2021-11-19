@@ -179,6 +179,7 @@ body {
   background: #ebc77d;
   display: flex;
   margin: auto;
+  padding: 0 0 50px 0;
 }
 .home-view {
   display: flex;
@@ -200,7 +201,8 @@ body {
   height: 480px;
   padding: 16px;
 }
-.home-view > .connect {
+.home-view > .connect,
+.home-view > .mint {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,9 +211,12 @@ body {
   padding: 16px;
   border: 0.5px solid black;
   border-radius: 16px;
+  width: 300px;
+  text-align: center;
   height: 72px;
   color: white;
   background-color: #6dd3ec;
+  margin: 16px 0;
 }
 .home-view > .connect:hover {
   background-color: rgba(109, 211, 236, 0.8);
@@ -233,14 +238,18 @@ body {
   border: 0.5px solid black;
   color: white;
   background-color: #ee8a86;
-  height: 32px;
+  height: 36px;
+  font-family: '210 Dongwhacaek R';
+  font-size: 24px;
 }
 .home-view > .input-container > .mint-limit {
   width: 100%;
   border: 0.5px solid black;
   color: white;
   background-color: #5bc6a9;
-  height: 32px;
+  height: 36px;
+  font-family: '210 Dongwhacaek R';
+  font-size: 24px;
 }
 .home-view > .bottom-container {
   padding-top: 32px;
@@ -276,7 +285,6 @@ body {
   width: 0%;
   background-color: #fb0611;
   border-radius: 16px;
-  animation: fill-bar 5s infinite;
 }
 .home-view > .bottom-container > .progress > .text-container {
   display: flex;
@@ -285,13 +293,5 @@ body {
 .home-view > .bottom-container > .progress > .text-container > .progress-text {
   margin-top: 16px;
   color: white;
-}
-@keyframes fill-bar {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
 }
 

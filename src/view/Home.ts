@@ -38,7 +38,11 @@ export default class Home implements View {
             el("button.mint", "Mint", {
                 click: async () => {
                     const count = parseInt(this.countInput.domElement.value, 10);
-                    await KlitsMinterContract.mint(count);
+                    if (count > 20) {
+                        alert("한번에 최대 20개의 NFT만 민팅할 수 있습니다.");
+                    } else {
+                        await KlitsMinterContract.mint(count);
+                    }
                 }
             }),
             el(".bottom-container",

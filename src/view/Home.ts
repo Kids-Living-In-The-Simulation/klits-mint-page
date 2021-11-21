@@ -17,7 +17,6 @@ export default class Home implements View {
     private balance: DomNode;
     private connectButton: DomNode;
     private addressInput: DomNode<HTMLInputElement>;
-    private countInput: DomNode<HTMLInputElement>;
     private bar: DomNode;
     private progressText: DomNode;
 
@@ -34,17 +33,9 @@ export default class Home implements View {
                 }
             }),
             el(".input-container", el(".label", "Address"), this.addressInput = el("input.address", { placeholder: "0x1234...", readonly: "readonly" })),
-            el(".input-container", el(".label", "Mint Limit"), this.countInput = el("input.mint-limit")),
             el("button.mint", "Mint", {
                 click: async () => {
-                    const count = parseInt(this.countInput.domElement.value, 10);
-                    if (isNaN(count)) {
-                        alert("Mint Limit 숫자를 입력해주시기 바랍니다.");
-                    } else if (count > 1) {
-                        alert("한번에 최대 1개의 NFT만 민팅할 수 있습니다.");
-                    } else {
-                        await KlitsMinterContract.mint(count);
-                    }
+                    await KlitsMinterContract.mint(1);
                 }
             }),
             el(".bottom-container",
